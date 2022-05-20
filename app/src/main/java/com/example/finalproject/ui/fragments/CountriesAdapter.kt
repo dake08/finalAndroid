@@ -28,6 +28,7 @@ class CountriesAdapter(val clickListener: CountriesClickListener) : ListAdapter<
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val current = getItem(position)
+
         holder.bind(current, clickListener)
     }
 

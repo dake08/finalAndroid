@@ -9,5 +9,21 @@
         android:id="@+id/countriesFragment"
         android:name="com.example.finalproject.ui.fragments.CountriesFragment"
         android:label="CountriesFragment"
-        tools:layout="@layout/fragment_countries"/>
+        tools:layout="@layout/fragment_countries">
+        <action
+            android:id="@+id/action_countriesFragment_to_countryFragment"
+            app:destination="@id/countryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.example.finalproject.ui.fragments.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country">
+        <action
+            android:id="@+id/action_addFragment_to_taskFragment"
+            app:destination="@id/countriesFragment"
+            app:popUpTo="@id/countriesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

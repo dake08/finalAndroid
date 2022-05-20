@@ -41,6 +41,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Title" />
 
+            <TextView
+                android:id="@+id/slug"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskTitle"
+                android:text="@{countryEntry.slug}"
+                tools:text="Slug" />
 
             <TextView
                 android:id="@+id/ISO"
@@ -54,7 +68,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/taskTitle"
+                app:layout_constraintTop_toBottomOf="@+id/slug"
                 android:text="@{countryEntry.iso2}"
                 tools:text="ISO2" />
 

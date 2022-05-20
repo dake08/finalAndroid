@@ -27,11 +27,13 @@ class CountriesFragment : Fragment() {
         binding.viewModel = viewModel
 
         adapter = CountriesAdapter(CountriesClickListener { countryEntry ->
-//            findNavController().navigate(
-//                TaskFragmentDirections.actionTaskFragmentToUpdateFragment(
-//                    taskEntry
-//                )
-//            )
+            val bundle = Bundle().apply {
+                putSerializable("slug", countryEntry)
+            }
+            findNavController().navigate(
+                R.id.action_countriesFragment_to_countryFragment,
+                bundle
+                )
         })
 
         viewModel.countriesList.observe(viewLifecycleOwner) {
